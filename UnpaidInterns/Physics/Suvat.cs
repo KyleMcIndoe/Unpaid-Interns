@@ -51,6 +51,22 @@ public static class suvatFuncs {
         return (s - (a * (t * t))) / (2 * t);
     }
 
+    public static double uwithouta(double[] ins) {
+        double s = ins[0];
+        double v = ins[2];
+        double t = ins[4];
+
+        return ((2 * s) / t) + v;
+    }
+
+    public static double uwithoutt(double[] ins) {
+        double s = ins[0];
+        double v = ins[2];
+        double a = ins[3];
+
+        return Math.Sqrt((2 * a * s) - (v * v));
+    }
+
     public static double[] findUnknowns(double?[] inputs) { // take an array [s, u, v, a, t] and find missing values
         double[] ans = new double[5];
 
