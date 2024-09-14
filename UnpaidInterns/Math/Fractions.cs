@@ -20,6 +20,11 @@ public class fraction {
         this.numerator /= divisor;
         this.denominator /= divisor;
     }
+
+    public bool isEqualTo(fraction y) {
+        if(this.toDecimal() == y.toDecimal()) return true;
+        return false;
+    }
 } 
 
 public static class fracMath {
