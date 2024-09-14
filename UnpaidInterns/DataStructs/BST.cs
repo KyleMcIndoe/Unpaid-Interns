@@ -1,4 +1,4 @@
-class bstNode {
+public class bstNode {
     public int val;
     public bstNode? left;
     public bstNode? right;
@@ -14,7 +14,7 @@ class bstNode {
     }
 }
 
-class bst {
+public class bst {
     bstNode root;
 
     public bst(int x) {

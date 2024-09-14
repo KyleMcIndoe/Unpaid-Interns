@@ -1,4 +1,4 @@
-class hashMap<t> { // map strings to a data type t
+public class hashMap<t> { // map strings to a data type t
     public List<string> keys = new List<string>();
 
     public t?[] values = new t[25500];
