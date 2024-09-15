@@ -1,4 +1,4 @@
-class queue<T> {
+public class queue<T> {
     List<T> elements = new List<T>();
 
     public queue() {
