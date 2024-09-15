@@ -18,4 +18,8 @@ public class stack {
     public int count() {
         return elements.Count;
     }
+
+    public int getTop() {
+        return elements[elements.Count - 1];
+    }
 }
