@@ -1,33 +1,33 @@
 using System.Configuration.Assemblies;
 
-public class treeNode{
-    public int val;
-    public treeNode? left;
-    public treeNode? right;
+public class treeNode<t>{
+    public t val;
+    public treeNode<t>? left;
+    public treeNode<t>? right;
 
-    public treeNode(int x){
+    public treeNode(t x){
         this.val = x;
         this.left = null;
         this.right = null;
     }
 
-    public treeNode(int x, treeNode l, treeNode r) {
+    public treeNode(t x, treeNode<t> l, treeNode<t> r) {
         this.val = x;
         this.left = l;
         this.right = r;
     }
 }
 
-public class tree {
-    public treeNode root;
+public class tree<t> {
+    public treeNode<t> root;
 
-    public tree(int x) {
-        this.root = new treeNode(x);
+    public tree(t x) {
+        this.root = new treeNode<t>(x);
     }
 
     public int count() {
         int c = 0;
-        void check(treeNode x) {
+        void check(treeNode<t> x) {
             c++;
             if(x.left != null) check(x.left);
             if(x.right != null) check(x.right);
@@ -38,10 +38,10 @@ public class tree {
         return c;
     }
 
-    public int[] toArray() {
-        int[] arr = new int[this.count()];
+    public t[] toArray() {
+        t[] arr = new t[this.count()];
         int i = 0;
-        void check(treeNode x) {
+        void check(treeNode<t> x) {
             arr[i] = x.val;
             i++;
             if(x.left != null) check(x.left);
@@ -53,10 +53,10 @@ public class tree {
         return arr;
     }
 
-    public List<treeNode> findLeaves() {
-        List<treeNode> ans = new List<treeNode>();
+    public List<treeNode<t>> findLeaves() {
+        List<treeNode<t>> ans = new List<treeNode<t>>();
         
-        void check(treeNode x) {
+        void check(treeNode<t> x) {
             if(x.left == null && x.right == null) ans.Add(x);
             if(x.left != null) check(x.left);
             if(x.right != null) check(x.right);
