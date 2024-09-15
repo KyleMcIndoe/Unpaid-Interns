@@ -13,4 +13,13 @@ public static class funcs{
         return total;
         
     }
+
+    public static int linearSearch(int[] ins, int val) {
+        for(int i = 0; i < ins.Length; i++) {
+            if(ins[i] == val) return i;
+        }
+
+        return -1;
+    }
+
 }
