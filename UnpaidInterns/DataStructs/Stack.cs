@@ -1,16 +1,16 @@
-public class stack {
-    List<int> elements = new List<int>();
+public class stack<t> {
+    List<t> elements = new List<t>();
 
     public stack() {
 
     }
 
-    public void push(int x) {
+    public void push(t x) {
         elements.Add(x);
     }
 
-    public int pop() {
-        int x = elements[elements.Count - 1];
+    public t pop() {
+        t x = elements[elements.Count - 1];
         elements.RemoveAt(elements.Count - 1);
         return x;
     }
@@ -19,7 +19,7 @@ public class stack {
         return elements.Count;
     }
 
-    public int getTop() {
+    public t getTop() {
         return elements[elements.Count - 1];
     }
 }
