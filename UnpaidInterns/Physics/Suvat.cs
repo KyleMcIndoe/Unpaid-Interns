@@ -172,6 +172,7 @@ public static class suvatFuncs {
 
         List<int> unknownIndices = new List<int>();
 
+
         string unkone = "";
         string unktwo = "";
 
@@ -185,6 +186,10 @@ public static class suvatFuncs {
                 funcInputs[i] = (double)inputs[i];
                 #pragma warning restore CS8629 // Nullable value type may be null.
             }
+        }
+
+        if(unknownIndices.Count < 2) {
+            throw new Exception("input needs 2 null values");
         }
 
         if(unknownIndices.Count > 2) {
