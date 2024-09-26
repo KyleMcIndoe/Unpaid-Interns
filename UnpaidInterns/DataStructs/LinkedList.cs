@@ -20,6 +20,17 @@ public class linkedList<T> {
         this.head = new listNode<T>(x);
     }
 
+    public listNode<T> this[int index] {
+        get {
+            listNode<T>? n = this.head;
+            for(int i = 0; i <= index && n != null; i++) {
+                if(i == index) return n;
+                n = n.next;
+            }
+            throw new Exception("Node not found in linked list");
+        }
+    }
+
     public T? getVal(int index) {
         listNode<T>? n = this.head;
         for(int i = 0; i <= index && n != null; i++) {
