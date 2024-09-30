@@ -13,6 +13,12 @@ public class hashMap<t> { // map strings to a data type t
         return this.values[index];
     }
 
+    public t? this[string k] {
+        get {
+            return getVal(k);
+        }
+    }
+
     public void add(string key, t value) {
         this.keys.Add(key);
         int i = funcs.hashFunction(key.ToString());
