@@ -8,4 +8,16 @@ public static class ArrFuncs {
 
         return result;
     }
+
+    public static T[] remove<T>(T[] arr, int x) {
+        T[] result = new T[arr.Length];
+        int i = 0;
+
+        foreach(T cur in arr) {
+            if(i != x) result[i] = cur;
+            i++;
+        }
+
+        return result;
+    }
 }
